@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+
+<html>
+      <head>
+            <link rel="stylesheet" href="products.css" type="text/css">
+            <link rel="icon" href="assets/logo.png">
+            <title>Bakery Products</title>
+            <header class="headercss">
+            <div class="logo">
+                  <h1> <img class ="logoImg" src="assets/logo.png"></h1>
+            </div>
+            <div class="menu">
+            
+                  <ul>
+                  <li>
+                        <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                        <a href="products.html">Products</a>
+                  </li>
+                  <li>
+                        <a href="order.html">Order</a>
+                  </li>
+                  <li>
+                        <a href="coupons.html">Coupons</a>
+                  </li>
+                  <li>
+                        <a href="reviews.html">Review Section</a>
+                  </li>
+                  </ul>
+            </div>
+            
+            
+            
+      </header>
+      <script>
+            const sliderContainer = document.querySelector('.slider-container');
+            const sliderList = document.querySelector('.slider-list');
+          
+            function slideItems() {
+              const containerWidth = sliderContainer.clientWidth;
+              const listWidth = sliderList.scrollWidth;
+          
+              if (containerWidth < listWidth) {
+                sliderContainer.style.transform = `translateX(-${listWidth - containerWidth}px)`;
+              } else {
+                sliderContainer.style.transform = 'translateX(0)';
+              }
+            }
+          
+            window.addEventListener('resize', slideItems);
+            document.addEventListener('DOMContentLoaded', slideItems);
+          </script>
+      </head>
+      
+      <body>
+            <p><H3>Choose from our wide variety of product</H3></p>
+            <div class="cake">
+                  <div class="title">
+                        <a href="cake.html">Cake</a>
+                  </div>
+                  <div class="slider">
+                        <div class="slider-container">
+                              <ul class="slider-list">
+                                  <li><img src="assets/black forest.jpg"></li>
+                                  <li><img src="assets/cheesecake.jpg"></li>
+                                  <li><img src="assets/chocolate cake.jpg"></li>
+                                  <li><img src="assets/oreo ice cream cake.jpg"></li>
+                                  <li><img src="assets/redvelvet cake.jpg"></li>
+                                  <li><img src="assets/wedcake.jpg"></li>
+                                </ul>
+                        </div>
+                  </div>
+            </div>
+            <div class="pastries">
+                  <div class="title">
+                        <a href="pastries.html">Pastries</a>
+                  </div>
+               
+                  <div class="slider">
+                        <div class="slider-container">
+                              <ul class="slider-list">
+                                  <li><img src="assets/cinnamonroll.jpg"></li>
+                                  <li><img src="assets/eclair.jpg"></li>
+                                  <li><img src="assets/kouign-amann.jpg"></li>
+                                  <li><img src="assets/kwasong.jpg"></li>
+                                  <li><img src="assets/painchocolat.jpg"></li>
+                                  <li><img src="assets/scones.jpg"></li>
+                                </ul>
+                        </div>
+                  </div>
+            </div>
+      </body>
+      <script src="https://kit.fontawesome.com/ac17bf45d6.js" crossorigin="anonymous"></script>
+      <footer>
+            <hr>
+            <div class="footer-container">
+              <div class="footer-column">
+                <h3>About Us</h3>
+                <p>ML Pastries is a family business that started during the pandemic.
+                  It sells various types of pastries and cakes that fits the palate of the consumers.
+                  The business aims to innovate with the creation of a website to promote business and advertise products.</p>
+              </div>
+              <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: hexakill090989@gmail.com</p>
+                <p>Phone: +09494742610</p>
+                <p>Address: 123 Bakery Street, City, Country</p>
+              </div>
+              <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2023 Bakery Website. All rights reserved. </p>
+            </div>
+          </footer>
+</html>

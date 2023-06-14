@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<head>
+      <link rel="stylesheet" href="Homepage.css" type="text/css">
+      <link rel="icon" href="assets/logo.png">
+<title>ML Bakery</title>
+<header class="headercss">
+      <div class="logo">
+            <h1> <img class ="logoImg" src="assets/logo.png"></h1>
+      </div>
+      <div class="menu">
+            <ul>
+            <li>
+                  <a href="index.html">Home</a>
+            </li>
+            <li>
+                  <a href="products.html">Products</a>
+            </li>
+            <li>
+                  <a href="order.html">Order</a>
+            </li>
+            <li>
+                  <a href="coupons.html">Coupons</a>
+            </li>
+            <li>
+                  <a href="reviews.html">Review Section</a>
+            </li>
+            </ul>
+      </div>
+      
+      
+      
+</header>
+
+</head>
+
+<body>
+      
+    
+      <div class="main">
+                
+                  <div class="slideshow-container">
+                    <img class="mySlides" src="assets/dashboardpics1.jpeg" alt="Image 1">
+                    <img class="mySlides" src="assets/Dashboardpics2.jpeg" alt="Image 2">
+                    <img class="mySlides" src="assets/Dashboardpics3.jpeg" alt="Image 3">
+                  </div>
+                  <div class="dot-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+            </div>
+      <div>
+            <br>
+            <br>
+            <hr>
+      <div class="pastries">
+                  <img  src="assets/pastries.jpeg">
+                  <p>
+                        Pastries refer to a category of baked goods that are typically sweet and flaky. 
+                  They are made from a combination of flour, butter, and sometimes eggs, sugar, or other flavorings. 
+                  Pastries encompass a range of treats like croissants, danishes, pies, and tarts, often filled with fruit, cream, or savory ingredients, providing a delightful indulgence for breakfast or dessert.
+                  </p>
+                 
+      </div>
+
+            <div class="cakes">
+                        
+                  <p>
+                        Cakes are delicious baked desserts typically made with a combination of flour, sugar, eggs, and fat. 
+                        They come in various flavors and shapes, often layered with frosting or filled with creams, fruits, or nuts, making them a popular choice for celebratory occasions.  
+                  </p>
+                  <img  src="assets/cake.png">
+            </div>
+            <div class="breads">     
+                        <img  src="assets/bread.jpeg">
+                  <p>
+                        Breads are staple food items made by mixing flour, water, yeast, and sometimes other ingredients like salt or sugar. 
+                        They are typically baked until golden brown and have a wide variety of types and textures, including loaves, rolls, baguettes, and flatbreads, serving as versatile options for sandwiches, toasts, or accompaniments to meals.  
+                  </p>
+            </div>
+            
+      </div>
+        
+
+      <script>
+            
+            var slideIndex = 0;
+            showSlides();
+    
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2000); 
+
+                
+            }
+         
+            </script>
+            <script src="https://kit.fontawesome.com/ac17bf45d6.js" crossorigin="anonymous"></script>
+      </body>
+
+      <footer>
+            <hr>
+            <div class="footer-container">
+              <div class="footer-column">
+                <h3>About Us</h3>
+                <p>ML Pastries is a family business that started during the pandemic.
+                  It sells various types of pastries and cakes that fits the palate of the consumers.
+                  The business aims to innovate with the creation of a website to promote business and advertise products.</p>
+              </div>
+              <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: hexakill090989@gmail.com</p>
+                <p>Phone: +09494742610</p>
+                <p>Address: 123 Bakery Street, City, Country</p>
+              </div>
+              <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2023 Bakery Website. All rights reserved.</p>
+            </div>
+          </footer>
+    </html>
+
+

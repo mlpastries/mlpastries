@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="stylesheet" href="products.css" type="text/css">
+      <title>Reviews</title>
+<header class="headercss">
+      <div class="logo">
+            <h1> <img class ="logoImg" src="assets/logo.png"></h1>
+      </div>
+      <div class="menu">
+      
+            <ul>
+            <li>
+                  <a href="index.html">Home</a>
+            </li>
+            <li>
+                  <a href="products.html">Products</a>
+            </li>
+            <li>
+                  <a href="order.html">Order</a>
+            </li>
+            <li>
+                  <a href="coupons.html">Coupons</a>
+            </li>
+            <li>
+                  <a href="reviews.html">Review Section</a>
+            </li>
+            </ul>
+      </div>
+      
+      
+</header>
+<body>
+          <div class="review-section">
+            <h1>Customer Reviews</h1>
+            <div class="review-form">
+              <h3>Leave a Review</h3>
+              <form id="review-form">
+                <div>
+                  <label for="rating">Rating:</label>
+                  <select id="rating" name="rating">
+                    <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+                    <option value="4">&#9733;&#9733;&#9733;&#9733;&#9734;</option>
+                    <option value="3">&#9733;&#9733;&#9733;&#9734;&#9734;</option>
+                    <option value="2">&#9733;&#9733;&#9734;&#9734;&#9734;</option>
+                    <option value="1">&#9733;&#9734;&#9734;&#9734;&#9734;</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="review-text">Review:</label>
+                  <textarea id="review-text" name="review-text" rows="5" cols="50"></textarea>
+                </div>
+                <div>
+                  <label for="review-author">Your Name:</label>
+                  <input type="text" id="review-author" name="review-author">
+                </div>
+                <button type="submit">Submit Review</button>
+              </form>
+            </div>
+            
+            <div class="review-list">
+              <h3>Previous Reviews:</h3>
+              <div class="review">
+                  <div class="review-rating">
+                    <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="date">May 15, 2023</span>
+                  </div>
+                  <p class="review-text">This website has the best pastries I've ever tasted. Highly recommended!</p>
+                  <p class="review-author">- John Doe</p>
+                </div>
+                <div class="review">
+                  <div class="review-rating">
+                    <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    <span class="date">May 12, 2023</span>
+                  </div>
+                  <p class="review-text">Great selection of cakes. The delivery was fast and the quality was excellent.</p>
+                  <p class="review-author">- Jane Smith</p>
+                </div>
+              <div id="reviews"></div>
+            </div>
+          </div>
+          
+</body>
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+  const reviewForm = document.getElementById('review-form');
+  const reviewsContainer = document.getElementById('reviews');
+
+  reviewForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const rating = document.getElementById('rating').value;
+    const reviewText = document.getElementById('review-text').value;
+    const reviewAuthor = document.getElementById('review-author').value;
+
+    if (reviewText.trim() !== '') {
+      const review = document.createElement('div');
+      review.className = 'review';
+      review.innerHTML = `
+        <div class="review-rating">
+          <span class="rating">${getRatingStars(rating)}</span>
+          <span class="date">${getCurrentDate()}</span>
+        </div>
+        <p class="review-text">${reviewText}</p>
+        <p class="review-author">- ${reviewAuthor}</p>
+      `;
+
+      reviewsContainer.appendChild(review);
+
+      reviewForm.reset();
+    }
+  });
+
+  function getRatingStars(rating) {
+    const filledStar = '&#9733;';
+    const emptyStar = '&#9734;';
+    return filledStar.repeat(rating) + emptyStar.repeat(5 - rating);
+  }
+
+  function getCurrentDate() {
+    const now = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return now.toLocaleDateString('en-US', options);
+  }
+});
+
+</script>
+<script src="https://kit.fontawesome.com/ac17bf45d6.js" crossorigin="anonymous"></script>
+<footer>
+  <hr>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>ML Pastries is a family business that started during the pandemic.
+        It sells various types of pastries and cakes that fits the palate of the consumers.
+        The business aims to innovate with the creation of a website to promote business and advertise products.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>Email: hexakill090989@gmail.com</p>
+      <p>Phone: +09494742610</p>
+      <p>Address: 123 Bakery Street, City, Country</p>
+    </div>
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 Bakery Website. All rights reserved. </p>
+  </div>
+</footer>
+</html>

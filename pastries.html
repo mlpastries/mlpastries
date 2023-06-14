@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="stylesheet" href="pastries.css" type="text/css">
+      <link rel="icon" href="assets/logo.png">
+      <title>Bakery Products</title>
+      <header class="headercss">
+      <div class="logo">
+            <h1> <img class ="logoImg" src="assets/logo.png"></h1>
+      </div>
+      <div class="menu">
+            <ul>
+            <li>
+                  <a href="index.html">Home</a>
+            </li>
+            <li>
+                  <a href="products.html">Products</a>
+            </li>
+            <li>
+                  <a href="order.html">Order</a>
+            </li>
+            <li>
+                  <a href="coupons.html">Coupons</a>
+            </li>
+            <li>
+                  <a href="reviews.html">Review Section</a>
+            </li>
+            </ul>
+      </div>
+      
+      
+      
+</header>
+<body>
+      <h3>List of pastries available for purchase:</h3>
+      <select id="category-filter">
+            <option value="all">All</option>
+            <option value="category1">Croissants</option>
+            <option value="category2">Macarons</option>
+            <option value="category3">Madeleine</option>
+          </select>
+          
+          <div class="content category3">
+            <img src="assets/cinnamonroll.jpg">
+            <h3>Cinnamon Roll</h3>
+            <p>Cinnamon rolls are sweet pastries with a rich, buttery dough swirled with cinnamon and sugar filling. 
+              They are baked until golden brown and often drizzled with cream cheese icing or glaze. 
+              The warm and aromatic flavors of cinnamon make these rolls a popular choice for breakfast or a sweet treat.
+            </p>
+            <p>₱15.00</p>
+            <button class="buy-button"><a href="order.html"> Buy Now</a> </button>
+          </div>
+          
+          <div class="content category2">
+            <img src="assets/eclair.jpg">
+            <h3>Eclair</h3>
+            <p> Eclairs are elegant pastries made from choux pastry dough, filled with creamy custard or whipped cream, and topped with a layer of glossy chocolate icing. 
+              The light and airy texture of the pastry, combined with the luscious filling and decadent chocolate topping, creates a delightful dessert experience.</p>
+            <p>₱15.00</p>
+            <button class="buy-button"><a href="order.html"> Buy Now</a> </button>
+          </div>
+          
+          <div class="content category3">
+            <img src="assets/kouign-amann.jpg">
+            <h3>Kouign-Amann</h3>
+            <p>Kouign-Amann is a traditional Breton pastry that originated in France. 
+              It consists of a flaky and buttery dough that is folded and baked with layers of butter and sugar. 
+              The result is a caramelized and crispy exterior with a tender, buttery interior, offering a unique blend of sweetness and texture.</p>
+            <p>₱15.00</p>
+            <button class="buy-button"><a href="order.html"> Buy Now</a> </button>
+          </div>
+          <div class="content category1">
+            <img src="assets/kwasong.jpg">
+            <h3>Kwasong</h3>
+            <p>Kwasong is a Korean dessert made from glutinous rice flour.
+               It is shaped into small balls, filled with sweet ingredients such as red bean paste or sesame seeds, and coated with a powder or syrup. 
+               Kwasong is known for its chewy and slightly sticky texture, making it a delightful treat in Korean cuisine.</p>
+            <p>₱15.00</p>
+            <button class="buy-button"><a href="order.html"> Buy Now</a> </button>
+          </div>
+          <div class="content category1">
+            <img src="assets/painchocolat.jpg">
+            <h3>Pain Chocolate</h3>
+            <p>Pain au chocolat, also known as chocolate croissant, is a French pastry made with flaky and buttery puff pastry dough wrapped around a bar of chocolate. 
+              When baked, the dough becomes crisp and golden, and the chocolate inside melts, resulting in a heavenly combination of buttery layers and rich chocolate.</p>
+            <p>₱15.00</p>
+            <button class="buy-button"><a href="order.html"> Buy Now</a> </button>
+          </div>
+          <div class="content category2">
+            <img src="assets/scones.jpg">
+            <h3>Scones</h3>
+            <p>Scones are a traditional British baked treat that resemble slightly sweet biscuits. 
+              They are made with flour, butter, sugar, and sometimes add-ins like dried fruits, chocolate chips, or nuts.
+              Scones have a crumbly texture and are often served with clotted cream and jam, making them a delightful option for afternoon tea.</p>
+            <p>₱15.00</p>
+            <button class="buy-button"><a href="order.html"> Buy Now</a> </button>
+          </div>
+
+      
+</body>
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterSelect = document.getElementById('category-filter');
+        const contents = document.querySelectorAll('.content');
+      
+        filterSelect.addEventListener('change', function() {
+          const selectedCategory = filterSelect.value;
+      
+          contents.forEach(function(content) {
+            if (selectedCategory === 'all' || content.classList.contains(selectedCategory)) {
+              content.style.display = 'block';
+            } else {
+              content.style.display = 'none';
+            }
+          });
+        });
+      });
+</script>
+<script src="https://kit.fontawesome.com/ac17bf45d6.js" crossorigin="anonymous"></script>
+
+<footer>
+  <hr>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>ML Pastries is a family business that started during the pandemic.
+        It sells various types of pastries and cakes that fits the palate of the consumers.
+        The business aims to innovate with the creation of a website to promote business and advertise products.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>Email: hexakill090989@gmail.com</p>
+      <p>Phone: +09494742610</p>
+      <p>Address: 123 Bakery Street, City, Country</p>
+    </div>
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 Bakery Website. All rights reserved. </p>
+  </div>
+</footer>
+</html>
